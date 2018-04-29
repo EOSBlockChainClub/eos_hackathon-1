@@ -1,0 +1,11 @@
+
+### Functions for contract
+createProject(description, target, owner,....)
+contribute(project, donor, amount, …)
+getProjectStatus(project)
+startWork(project, contractor, ….) -> Release part of the fund.
+report_progress(project, video_url, value, ...)
+verify_progress(project, value, user, …)
+report_complete(project, video_url, contractor, …)
+verify_complte(....)
+release_funding()

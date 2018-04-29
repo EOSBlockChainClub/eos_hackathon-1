@@ -1,0 +1,18 @@
+server {
+    listen 80;
+
+    server_name  verifund.tk 52.178.132.109;
+    access_log /var/log/nginx/verifund.log;
+
+    # pass the request to the node.js server with the correct headers and much more can be added, see nginx config options
+    location / {
+
+      proxy_pass http://127.0.0.1:8888/;
+      #proxy_pass http://127.0.0.1:7080/;
+      proxy_http_version 1.1;
+      proxy_set_header Upgrade $http_upgrade;
+      proxy_set_header Connection "upgrade";
+      proxy_set_header Host $http_host;
+      proxy_set_header REMOTE_ADDR $remote_addr;
+    }
+ }
